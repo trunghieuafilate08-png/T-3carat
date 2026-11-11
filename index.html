@@ -1,0 +1,243 @@
+# Tổ-3carat <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổ 3carat | Du Lịch Tà Xùa - Vùng Đất Mây Núi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D5016',
+                        secondary: '#8FBC8F',
+                        accent: '#F5A623',
+                        light: '#F8F9FA',
+                        dark: '#1A2E0C',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .hero-gradient {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans scroll-smooth">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-white text-xl font-bold flex items-center">
+                <i class="fa fa-gem mr-2 text-accent"></i>
+                <span class="font-['Playfair_Display']">Tổ 3carat</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#gioi-thieu" class="text-white hover:text-accent transition-colors">Giới Thiệu</a>
+                <a href="#diem-den" class="text-white hover:text-accent transition-colors">Điểm Đến</a>
+                <a href="#am-thuc" class="text-white hover:text-accent transition-colors">Ẩm Thực</a>
+                <a href="#kinh-nghiem" class="text-white hover:text-accent transition-colors">Kinh Nghiệm</a>
+                <a href="#thanh-vien" class="text-white hover:text-accent transition-colors">Thành Viên</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark/95 backdrop-blur-sm">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#gioi-thieu" class="text-white py-2 hover:text-accent">Giới Thiệu</a>
+                <a href="#diem-den" class="text-white py-2 hover:text-accent">Điểm Đến</a>
+                <a href="#am-thuc" class="text-white py-2 hover:text-accent">Ẩm Thực</a>
+                <a href="#kinh-nghiem" class="text-white py-2 hover:text-accent">Kinh Nghiệm</a>
+                <a href="#thanh-vien" class="text-white py-2 hover:text-accent">Thành Viên</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://picsum.photos/id/1036/1920/1080" alt="Tà Xùa - Vùng đất mây" class="w-full h-full object-cover">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <p class="text-accent text-lg md:text-xl mb-4 font-medium">👋 Chào mừng đến với</p>
+            <h1 class="text-[clamp(2rem,7vw,4.5rem)] font-bold text-white mb-3 font-['Playfair_Display'] leading-tight text-shadow">
+                Tà Xùa - Vùng Đất Mây
+            </h1>
+            <p class="text-2xl text-accent/90 mb-6 font-semibold">Tổ 3carat_Du lịch Tà Xùa</p>
+            <p class="text-[clamp(1rem,3vw,1.25rem)] text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Nơi núi non hòa vào bầu trời, nơi mây trời ôm trọn đỉnh núi — thiên đường trên mặt đất ở Sơn La
+            </p>
+            <a href="#gioi-thieu" class="inline-block bg-accent hover:bg-accent/90 text-dark font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                Khám Phá Ngay <i class="fa fa-arrow-down ml-2 animate-bounce inline-block"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Giới Thiệu -->
+        <section id="gioi-thieu" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-primary mb-4 font-['Playfair_Display']">Về Tà Xùa</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Dự án của <strong>Tổ 3carat</strong> — giúp bạn khám phá vẻ đẹp kỳ diệu của Tà Xùa, "Vương quốc mây" tại Sơn La</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-2xl font-bold text-dark mb-4">Vẻ đẹp hoang sơ của cao nguyên Tây Bắc</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Tà Xùa thuộc huyện Bắc Yên, tỉnh Sơn La, nằm ở độ cao từ 1.500 - 2.875 mét so với mực nước biển. Nơi đây nổi tiếng với cảnh quan thiên nhiên hùng vĩ, những thửa ruộng bậc thang xanh mướt và văn hóa đa dạng của đồng bào dân tộc Mông, Thái.</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Đặc biệt, Tà Xùa được ví như <strong>"vương quốc mây"</strong> — khi sáng sớm, biển mây bao phủ toàn bộ thung lũng, chỉ có những đỉnh núi nhô lên như hòn đảo trên biển mây bồng bềnh.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">🌊 Vương quốc mây</span>
+                            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">⛰️ Đỉnh cao 2.875m</span>
+                            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">🏔️ Nóc nhà Sơn La</span>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 relative">
+                        <img src="https://picsum.photos/id/1039/800/600" alt="Phong cảnh Tà Xùa" class="w-full h-auto rounded-xl shadow-2xl">
+                        <div class="absolute -bottom-6 -left-6 bg-accent text-dark p-6 rounded-lg shadow-lg">
+                            <p class="text-3xl font-bold">2.875m</p>
+                            <p class="text-sm">Đỉnh cao nhất</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Điểm Đến Nổi Bật -->
+        <section id="diem-den" class="py-24 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-primary mb-4 font-['Playfair_Display']">Điểm Đến Không Thể Bỏ Lỡ</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Cùng Tổ 3carat khám phá những địa điểm tuyệt đẹp tại Tà Xùa</p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1035/600/400" alt="Đỉnh Tà Xùa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Đỉnh Tà Xùa</h3>
+                            <p class="text-gray-600 mb-4">Đỉnh cao nhất 2.875m. Ngắm biển mây và bình minh ngoạn mục nhất miền Bắc.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1031/600/400" alt="Đèo Tà Xùa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Đèo Tà Xùa</h3>
+                            <p class="text-gray-600 mb-4">Cung đường đèo hùng vĩ, một trong những cung đường đẹp và hiểm trở nhất Việt Nam.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1037/600/400" alt="Làng dân tộc" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Làng Dân Tộc</h3>
+                            <p class="text-gray-600 mb-4">Khám phá đời sống văn hóa của đồng bào dân tộc Mông, Thái với nét văn hóa đặc sắc.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1058/600/400" alt="Ruộng bậc thang" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Ruộng Bậc Thang</h3>
+                            <p class="text-gray-600 mb-4">Những thửa ruộng uốn lượn theo sườn núi, xanh mướt mùa nước đổ và vàng ươm mùa lúa chín.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1019/600/400" alt="Thác nước" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Thác Nước</h3>
+                            <p class="text-gray-600 mb-4">Những thác nước trong xanh ẩn mình trong rừng nguyên sinh, không khí mát mẻ quanh năm.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                        <img src="https://picsum.photos/id/1046/600/400" alt="Vùng hoa dã" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">Vùng Hoa Dã</h3>
+                            <p class="text-gray-600 mb-4">Mùa hoa tam giác mạch, hoa đỗ quyên nở rộ bao phủ núi rừng, thơ mộng như trong tranh.</p>
+                            <span class="inline-flex items-center text-primary font-medium">
+                                Xem chi tiết <i class="fa fa-arrow-right ml-1 text-sm"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ẩm Thực -->
+        <section id="am-thuc" class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-primary mb-4 font-['Playfair_Display']">Ẩm Thực Đặc Sản</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Thưởng thức hương vị núi rừng Tây Bắc tại Tà Xùa</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-light p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+                        <div class="w-20 h-20 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🍖</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Thịt Lợn Bản</h3>
+                        <p class="text-gray-600 text-sm">Lợn nuôi tự nhiên, thịt thơm ngon, chế biến theo cách truyền thống dân tộc.</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+                        <div class="w-20 h-20 bg-secondary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🍚</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Cơm Lam</h3>
+                        <p class="text
